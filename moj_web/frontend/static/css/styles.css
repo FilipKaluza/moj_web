@@ -1,0 +1,311 @@
+/*Interactive BG*/
+
+body {
+  background-image: url("../images/bg1.png");
+}
+
+h1 {
+  text-align: center;
+}
+
+/* NAVBAR */
+nav {
+  margin: 10px 25px;
+  border-radius: 10px;
+  padding: 0px;
+  opacity: 0.8;
+  background-color: #000000;
+  position: absolute;
+  z-index: 1;
+}
+
+nav:hover {
+  opacity: 1;
+}
+
+ul {
+  font-family: Roboto Arial;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.navbar-toogler-icon {
+  color: #FF0000;
+  background-color: red;
+  position: relative;
+}
+
+.navbar-nav > li {
+  padding-right: 35px;
+}
+
+.navbar li a {
+color: #FFFFFF !important;
+}
+
+.goals {
+background-color: #000000;
+font-size: 19px;
+font-weight: 400;
+}
+
+/* MAIN - PICTURE */
+
+.img-fluid {
+  margin: 130px 10px 10px 10px;
+  border-radius: 50px 100px 100px 30px;
+}
+
+.picture {
+    max-width: 100%;
+    height: auto;
+}
+
+.maintxt {
+  margin: 0;
+  padding: 15px;
+  margin: 10% 12.5%;
+  width: 75%;
+  background-color: #FFFFFF;
+  opacity: 0.7;
+}
+
+.maintxt h1 {
+  font-family: Times;
+  font-weight: 600;
+  font-size: 60px;
+  opacity: 0.8;
+}
+
+.maintxt h3 {
+  font-family: Georgia;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+/* imp things*/
+.threethingsheader h1 {
+  font-family: Roboto Arial;
+  font-weight: 600;
+  font-size: 60px;
+  transform: rotate(-1deg);
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.card-title {
+  font-family: Roboto Arial;
+  font-size: 37px;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 75px;
+}
+
+
+.card-text {
+  font-family: Roboto Arial;
+  font-size: 20px;
+  text-align: left;
+  font-weight: 500;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+/* Flip RULE effects*/
+.flip-card {
+  background-color: transparent;
+  height: 200px;
+  padding-bottom: 15px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0px 15px 15px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* My profile * - photo + slider with skills*/
+/*photo*/
+
+.headerpersonal {
+  font-family: Roboto Arial;
+  font-size: 45px;
+  padding-top: 20%;
+  margin-bottom: 5%;
+  font-weight: 600;
+}
+
+.myphoto {
+  width: 50%;
+  max-height: auto;
+}
+
+.perinfocard {
+  width: 75%;
+  height: auto;
+  border: 3px solid #000000;
+  background-image: url("../images/bg-photo2.png");
+}
+
+.my-des-homepage {
+  text-align: justify;
+}
+
+/*slider*/
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-bottom: 16px;
+  padding: 22px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: 1;
+}
+
+/* Positions of buttons on slider*/
+.prev {
+  right: 85%;
+}
+
+.next {
+  margin-left: 35%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #e10000;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-family: Roboto Arial;
+  font-size: 35px;
+  padding: 10px 5px;
+  position: absolute;
+  top: 115%;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 14s;
+  animation-name: fade;
+  animation-duration: 14s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .2}
+  to {opacity: 1}
+}
+
+/* CONTACT */
+.contactheader {
+  font-size: 70px;
+  font-family: Roboto, Arial;
+  margin-top: 75px;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.contactinfo {
+  background-color: #e9ecef;
+}
+
+.contactinfo h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  font-family: Roboto, Arial;
+  text-align: center;
+  font-weight: 500;
+}
+
+.emailetc {
+  font-size: 30px;
+  font-family: Roboto, Arial;
+  text-align: left;
+  padding-left: 18%;
+  font-weight: 400;
+}
+
+
+/* FOOTER */
+
+footer {
+  margin-top: 5%;
+  text-align: center;
+  background-color:#bbb;
+  font-family: Roboto, Arial;
+  font-size: 15px;
+}

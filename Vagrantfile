@@ -22,4 +22,7 @@ Vagrant.configure("2") do |config|
   # public network => bridged ## kvôli ip-čke
 config.vm.network "public_network"
 
+# install and cofigure software
+config.vm.provision :shell, :path => "bootstrap.sh"
+
 end

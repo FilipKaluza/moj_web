@@ -1,0 +1,76 @@
+{% extends "_main.jinja" %}
+
+{% block title %} Aboutme {% endblock %}
+
+{% block main %}
+<!-- My profile -->
+    <div class="row" align="center" id="aboutme">
+      <div class="perinfo col col-12 col-md-6">
+        <h1 class="headerpersonal"> Personal informations </h1>
+        <div class="card perinfocard">
+          <div class="card-body">
+            <h4 class="card-title">Filip Kaluža</h4>
+            <img class="card-img-top myphoto" src="../static/images/photo.png">
+          </div>
+          <div class="card-body">
+            <p class="card-text my-des-homepage">
+              Hi, Greetings from the author of this website. I am an optimistic, purposeful and friendly person. In 2020, I set a goal to become a programmer, so let's go!</p>
+              <a href="#!" class="btn btn-primary">Show CV</a>
+          </div>
+        </div>
+      </div>
+      <div class="My skills col col-12 col-md-6">
+        <h1 class="headerpersonal"> My skills </h1>
+        <div class="slideshow-container">
+
+              <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade" >
+            <img class="img-fluid" src="../static/images/JS-logo.png" style="height:450px" style="width:100%">
+            <div class="text">Javascript</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="img-fluid" src="../static/images/python-logo.png" style="height:450px" style="width:100%">
+            <div class="text"> Python </div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="img-fluid" src="../static/images/React-logo.png" style="height:450px" style="width:100%">
+            <div class="text">React</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="img-fluid" src="../static/images/html-logo.png" style="height:450px" style="width:100%">
+            <div class="text">HTML</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="img-fluid" src="../static/images/css-logo.png" style="height:450px" style="width:100%">
+            <div class="text">CSS</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img class="img-fluid" src="../static/images/bootstrap-logo.png" style="height:450px" style="width:100%">
+            <div class="text">Bootstrap</div>
+          </div>
+
+              <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)"">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)"" >&#10095;</a>"
+        </div>
+        <br>
+
+          <!-- DOTS under slides -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+{% endblock %}
+

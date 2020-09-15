@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title> {% block title %} {% endblock %} </title>
+    {% block head %}
+        {% include "_head.jinja" %} 
+    {% endblock %}
+</head>
+
+<body>
+
+<header>
+    <nav>
+        {% include "_nav.jinja" %}
+    </nav>
+</header>
+
+<main class="container-fluid">
+    {% block main %} {% endblock %}
+</main>
+
+<footer>
+    {% include "_footer.jinja" %}
+</footer>
+</body>
+</html>
