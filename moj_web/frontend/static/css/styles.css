@@ -51,14 +51,11 @@ font-weight: 400;
 
 /* MAIN - PICTURE */
 
-.img-fluid {
-  margin: 130px 10px 10px 10px;
-  border-radius: 50px 100px 100px 30px;
-}
-
 .picture {
     max-width: 100%;
     height: auto;
+    margin: 130px 10px 10px 10px;
+    border-radius: 50px 100px 100px 30px;
 }
 
 .maintxt {
@@ -152,6 +149,47 @@ font-weight: 400;
   color: white;
   transform: rotateY(180deg);
 }
+
+/* Quotes */
+.quotesheader h1 {
+  font-family: Roboto Arial;
+  font-weight: 600;
+  font-size: 60px;
+  transform: rotate(-1deg);
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.card {
+  max-width: 45%;
+  height: auto;
+  padding: 0;
+  margin: 2%;
+}
+
+.quotetext {
+  width: 70%; 
+  margin-top: 10%;
+  margin-left: 15%;
+  text-align: center;
+  opacity: 0.7;
+  position: absolute;
+  background: gray;
+  color: white;
+}
+
+.quoteauthor {
+  width: 30%;
+  text-align: right;
+  margin-top: 2%;
+  position: absolute;
+  margin-left: 35%;
+  color: black;
+  font-weight: 800;
+  font-size:1.7vw;
+}
+
+
 
 /* My profile * - photo + slider with skills*/
 /*photo*/

@@ -1,13 +1,23 @@
 from flask import Flask, url_for
 
 from flask import Flask, render_template
+from flask import g
+
+from .models import db
 
 flask_app = Flask(__name__)
 
+flask_app.config.from_pyfile("/vagrant/configs/development.py")
+
+db.init_app(flask_app)
 
 @flask_app.route('/')
 def view_homepage():
-    return render_template("home/home.jinja")
+    page = request.args.get("page", 1, type=int)
+    paginate = Quote.query.order_by(Quote.id.desc()).paginate(page, 2, False)
+    return render_template("home/home.jinja",
+    quotes=paginate.items, ##pre zobrazenie článkov
+    paginate=paginate) ## potrebné pre zobrazenie číslovania)
 
 @flask_app.route('/aboutme/')
 def view_aboutmepage():
@@ -41,4 +51,11 @@ def Internal_server_error(error):
     return render_template("errors/404.jinja"), 404
 
 
- 
+
+## CLI COMMAND
+
+def init_db(app):
+        with app.app_context():
+            db.create_all()
+            print("Database inicialized")
+

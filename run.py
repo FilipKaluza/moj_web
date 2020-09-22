@@ -1,4 +1,6 @@
 from moj_web.frontend.app import flask_app
+from moj_web.frontend.app import init_db
+
 import sys
 
 def start():
@@ -6,6 +8,8 @@ def start():
     host = "0.0.0.0"
     flask_app.run(host, debug=debug)
 
+def init():
+    init_db(flask_app)
 
 if __name__ == "__main__":
     if len(sys.argv) > 1:
