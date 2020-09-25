@@ -6,6 +6,8 @@ from flask import redirect ##pre adminpage login
 from flask import url_for ##pre adminpage
 from flask import session ## umožnuje prácu s cookies pre indentifikáciu usera
 from flask import flash ##flash správy
+from flask import send_file, current_app ##pre PDF
+import os
 
 ## pre DB
 from .models import db
@@ -29,9 +31,14 @@ def view_homepage():
     quotes=paginate.items, ##pre zobrazenie článkov
     paginate=paginate) ## potrebné pre zobrazenie číslovania)
 
-@flask_app.route('/aboutme/')
+@flask_app.route('/aboutme/', methods=["GET"])
 def view_aboutmepage():
     return render_template("aboutme/aboutme.jinja")
+
+@flask_app.route('/aboutme/download')
+def downloadCV():
+	path = "static/cv.pdf"
+	return send_file(path, as_attachment=True)
 
 @flask_app.route('/games/')
 def view_gameslist():
