@@ -73,7 +73,7 @@ def view_adminpage():
 @login_required
 def view_add_quote():
     form = QuoteForm()
-    return render_template("quote_editor.jinja", form=form)
+    return render_template("/admin/quote_editor.jinja", form=form)
 
 
 ## s metódou POST na pridanie citátu
@@ -106,7 +106,7 @@ def view_quote_editor(quote_id):
 
 @flask_app.route('/admin/quotes/<int:quote_id>/', methods=["POST"])
 @login_required
-def edit_quote(art_id):
+def edit_quote(quote_id):
     quote = Quote.query.filter_by(id = quote_id).first()
     if quote:
         edit_form = QuoteForm(request.form)
