@@ -179,11 +179,11 @@ font-weight: 400;
 }
 
 .quoteauthor {
-  width: 30%;
-  text-align: right;
+  width: 50%;
+  text-align: center;
   margin-top: 2%;
   position: absolute;
-  margin-left: 35%;
+  margin-left: 25%;
   color: black;
   font-weight: 800;
   font-size:1.7vw;
@@ -337,13 +337,28 @@ font-weight: 400;
   font-weight: 400;
 }
 
+/* Adminpage */
+.login_form {
+  margin-top: 100px;
+}
+
+.adminpage {
+  margin-top: 100px;
+}
+
+.change_password {
+  margin-top: 100px;
+}
 
 /* FOOTER */
 
-footer {
-  margin-top: 5%;
+.footer {
   text-align: center;
   background-color:#bbb;
   font-family: Roboto, Arial;
   font-size: 15px;
+}
+
+.logout_btn {
+  margin-top: 5%;
 }

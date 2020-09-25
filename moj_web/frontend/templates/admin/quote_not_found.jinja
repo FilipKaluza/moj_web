@@ -1,0 +1,22 @@
+{% extends "_main.jinja" %}
+
+{% block title %} Quote not found {% endblock %}
+
+{% block main %}
+<div class="row ">
+    <div class="col-md-12">
+        <div class="error-template">
+            <h1>Oops!</h1>
+            <h2>This article doesn't exists</h2>
+            <div class="error-details">
+                Unfortunately this article doens't exists :(
+            </div>
+            <div class="error-actions">
+                <a href="/" class="btn btn-primary btn-lg"> Home </a>
+                <a href={{ url_for("view_homepage") }} class="btn btn-default btn-lg">All articles</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "_main.jinja" %}
+
+{% block title %} New Quote {% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href={{url_for("static", filename="stylesheets/simplemde.min.css")}}>
+    <script src={{url_for("static", filename="js/simplemde.min.js")}}></script>
+    <script src={{url_for("static", filename="js/editor.js")}}></script>
+{% endblock %}
+
+{% block main %}
+
+{% if article %}
+<form action="{{ url_for("edit_quote", art_id=article.id) }}" method="post">
+{% else %}
+<form action="{{ url_for("add_quote") }}" method="post">
+{% endif %}    
+    {{ form.csrf_token }} {# pre bezpečnosť, proti cross-site request forgery #}
+    <div class="form-group">
+        {{ form.author.label }}
+        {{ form.author(class="form-control", placeholder="Article title") }}
+        
+    </div>
+    <div class="form-group">
+        {{ form.content.label }}
+        {{ form.content() }}
+    </div>
+    <div class="form-group">
+        {{ form.html_render() }}
+    </div>
+    <input type="submit" value="save">
+</form>
+
+{% endblock %}
