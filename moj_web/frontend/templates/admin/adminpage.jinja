@@ -19,7 +19,7 @@
         <thead>
             <tr>
             <th scope="col">Id</th>
-            <th scope="col">Title</th>
+            <th scope="col">Author</th>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +28,7 @@
                 <tr>
                     <th> {{ quote.id }}</td>
                     <td> <a href={{ url_for("view_quote_editor", quote_id = quote.id) }}> {{ quote.author }} </a> </td>
+                    <td> <a href={{ url_for("remove_quote", quote_id = quote.id) }} role="button" class="btn btn-danger" method="delete">Remove</a> </td>
                 </tr>
             {% endfor %}
         </tbody>

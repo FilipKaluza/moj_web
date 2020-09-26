@@ -1,5 +1,6 @@
-<a href={{ url_for("logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
-
+{% if "logged" in session %}
+    <a href={{ url_for("logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
+{% endif %}
 <footer class="footer">
     <div class="container-fluid">
         <span> (c) 2020 Filip Kaluža </span>

@@ -1,7 +1,7 @@
 <div class="container-fluid nav">
     <nav class="navbar fixed-top navbar-expand-lg navbar-light border border-dark">
       <a class="navbar-brand" href="{{ url_for("view_homepage") }}">
-        <img class="img-brand-top" src="../static/images/logo1.png">
+        <img class="img-brand-top" src={{url_for("static", filename="images/logo1.png")}}>
       </a>
       <button class="navbar-toggler btn-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toogler-icon text-dark"></span>

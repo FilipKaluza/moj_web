@@ -99,7 +99,7 @@ def add_quote():
         return redirect(url_for("view_adminpage"))
 
 ## editácia citátu
-@flask_app.route('/admin/quotes/<int:quote_id>/edit/', methods=["GET"])
+@flask_app.route('/admin/quotes/<int:quote_id>/edit/', methods=["GET", "DELETE"])
 @login_required
 def view_quote_editor(quote_id):
     quote = Quote.query.filter_by(id = quote_id).first()
@@ -108,7 +108,7 @@ def view_quote_editor(quote_id):
         form.author.data = quote.author
         form.content.data = quote.content
         return render_template("/admin/quote_editor.jinja", quote = quote, form=form)
-    return render_template("quote_not_found.jinja", quote_id = quote_id)
+    return render_template("/admin/quote_not_found.jinja", quote_id = quote_id)
 
 
 @flask_app.route('/admin/quotes/<int:quote_id>/', methods=["POST"])
@@ -120,12 +120,22 @@ def edit_quote(quote_id):
         if edit_form.validate():
             quote.author = edit_form.author.data
             quote.content = edit_form.content.data
-            print(edit_form.author.data)
             quote.html_render = edit_form.html_render.data
             db.session.add(quote)
             db.session.commit()
             flash("Changes was saved", "success")
             return redirect(url_for("view_adminpage", quote_id = quote_id))
+
+## s metódou DELETE na ostránenie citátu
+@flask_app.route("/admin/quotes/delete/<int:quote_id>/", methods=["GET"])
+@login_required
+def remove_quote(quote_id):
+    quote = Quote.query.filter_by(id = quote_id).first()
+    if quote:
+        db.session.delete(quote)
+        db.session.commit()
+        flash("Quote was removed", "success")
+        return redirect(url_for("view_adminpage"))
 
 
 ## CHANGE PASSWORD
@@ -133,7 +143,7 @@ def edit_quote(quote_id):
 @login_required
 def view_change_password():
     form = changePasswordForm()
-    return render_template("admin/change_password.jinja", form=form)
+    return render_template("/admin/change_password.jinja", form=form)
 
 @flask_app.route("/admin/changepassword/", methods=["POST"])
 @login_required
@@ -176,7 +186,8 @@ def login_user():
 
 
 ##LOGOUT
-@flask_app.route('/admin/logout/', methods=["POST"])
+@flask_app.route('/admin/logout/', methods=["GET", "POST"])
+@login_required
 def logout_user():
     session.pop("logged")
     flash(u"You had been logged out", category="success")
@@ -188,11 +199,11 @@ def logout_user():
 ## ERROR handler
 @flask_app.errorhandler(500)
 def Internal_server_error(error):
-    return render_template("500.jinja"), 500
+    return render_template("/errors/500.jinja"), 500
 
 @flask_app.errorhandler(404)
 def Internal_server_error(error):
-    return render_template("404.jinja"), 404
+    return render_template("/errors/404.jinja"), 404
 
 
 
