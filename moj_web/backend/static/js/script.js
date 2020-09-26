@@ -50,3 +50,12 @@ function showSlides(n) {
 }
 
 automaticSlides()
+
+const screenSize = () => {
+  let w = window.innerWidth;
+  if(w < 600) {
+    return 1
+  } else {
+    return 2
+  }
+}

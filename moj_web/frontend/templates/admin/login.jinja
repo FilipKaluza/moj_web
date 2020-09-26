@@ -6,7 +6,7 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-6 login_form">
-            <form action="{{url_for("login_user")}}", method=post>
+            <form action="{{url_for("admin.login_user")}}", method=post>
                 {{ form.csrf_token }}
                 <div class="form-group">
                     {{ form.username.label }}

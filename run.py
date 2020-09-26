@@ -1,5 +1,5 @@
-from moj_web.frontend.app import flask_app
-from moj_web.frontend.app import init_db
+from moj_web.backend.app import flask_app
+from moj_web.backend.app import init_db
 
 import sys
 

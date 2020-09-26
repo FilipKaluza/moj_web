@@ -4,13 +4,16 @@
         <div class="col col-12">
         <h1> Quotes </h1>
         </div>
+
+    
+
     </div>
-    <div class="row">
     {% if quotes %}
+    <div class="row">
     {% for quote in quotes %}
         <div class="card col-12 col-md-6" >
             <img class="card-img-top" src="../static/images/quotebg.png" alt="quotes">
-            <div style="font-size:2vw;" class="quotetext card-body p-2">
+            <div class="quotetext card-body p-2">
             {{ quote.content }}
             </div>
             <div class="quoteauthor card-body p-2">
@@ -19,13 +22,17 @@
         </div>
     {% endfor %}
     </div>
+
+
+
+
         {# PAGINATION #}
         <ul class="pagination justify-content-center mt-3">
 
         {# add previous button #}
         {% if paginate.has_prev %}
                     <li class="page-item">
-                <a class="page-link" href={{url_for("view_homepage", page=paginate.prev_num)}} >Previous</a>
+                <a class="page-link" href={{url_for("home.view_homepage", page=paginate.prev_num)}} >Previous</a>
             </li>
         {% endif %}
 
@@ -34,7 +41,7 @@
         {%- for page in paginate.iter_pages() %}
             {% if page %}
                 {% if page != paginate.page %}
-                                    <li class="page-item"> <a class="page-link" href={{ url_for("view_homepage", page=page) }}>{{page}}</a></li>
+                                    <li class="page-item"> <a class="page-link" href={{ url_for("home.view_homepage", page=page) }}>{{page}}</a></li>
                 {% else %}
                                     <li class="page-item disabled"><a class="page-link">{{ page }}</a></li>
                 {% endif %}
@@ -45,13 +52,13 @@
                 {# add next button #}
         {% if paginate.has_next %}
                     <li class="page-item">
-                <a class="page-link" href={{url_for("view_homepage", page=paginate.next_num)}} >Next</a>
+                <a class="page-link" href={{url_for("home.view_homepage", page=paginate.next_num)}} >Next</a>
             </li>
         {% endif %}
         </ul>
 
-    {% else %}
-        <p> No Quotes </p>
-    {% endif %}
-
+        {% else %}
+            <p> No Quotes </p>
+        {% endif %}
+    </div>
 {% endblock %}

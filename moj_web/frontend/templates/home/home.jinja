@@ -4,16 +4,11 @@
 
 {% block main %}
     {# main picture #}
-    <div class="picture img-fluid" style="background:url(../static/images/main.png) no-repeat; background-size: cover;">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-centered">
-            <br>
-            <br>
-            <br>
-            <div class="maintxt jumbotron-fluid text-center">
-                <h1> BE Developer</h1>
-                <h3> Time to start coding </h3>
-            </div>
-            <br>
+    <div class="thumbnail">
+        <img class="picture img-fluid" src="{{url_for("static", filename="images/main.png") }}" >
+        <div class="maintxt centered">
+            <h1> BE DEVEloper </h1>
+            <h3> Time to start coding ! </h3>
         </div>
     </div>
     
