@@ -1,64 +1,101 @@
+html {
+  background-color: black;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 body {
-    background-color: #650101;
-    margin-top: 100px;
-  }
+  background-color:black;;
+}
+
+.footer {
+  margin: 0;
+}
+
+.choredoor {
+  display: none;
+}
+
+.gamebg {
+  background: black;
+}
   
-  .header {
-    background-color: #0000006e;
-    text-align: center;
-  }
-  
-  .title-row {
-    text-align: center;
-    margin-top: 42px;
-    margin-bottom: 21px;
-  }
-  
-  .instructions-title {
-    display: inline;
-    font-size: 18px;
-    color: #7c0000;
-    font-family: "Work Sans";
-  }
-  
-  .instructions-number {
-    padding-right: 25px;
-    font-family: "Work Sans";
-    font-size: 36px;
-    color: #7c0000;
-  }
-  
-  .instruction-row {
-    margin: 0 auto;
-    width: 400px;
-  }
-  
-  .instructions-text {
-    padding: 10px;
-    font-family: "Work Sans";
-    font-size: 14px;
-    color:#7c0000;
-  }
-  
-  .door-row {
-    text-align: center;
-  }
-  
-  
-  .door-frame {
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .start-row {
-    margin: auto;
-    width: 200px;
-    height: 100%;
-    font-family: "Work Sans";
-    background-color: #eb6536;
-    font-size: 18px;
-    text-align: center;
-    color: #010165;
-    cursor: pointer;
-  }
+.header {
+  text-align: center;
+  margin-top: 8vw;
+  max-width: 50%;
+  height: auto;
+  margin-left: 25%;
+}
+
+.instruction-row {
+  text-align: left;
+  width: 95%;
+  margin-left: 5%;
+}
+
+.title-row {
+  text-align: center;
+}
+
+.instructions-title {
+  font-size: 4vw;
+  color: white;
+  font-family: "Times";
+  width: 100%;
+  text-align: left;
+}
+
+.instructions-number {
+  padding-right: 1vw;
+  font-family: "Times";
+  font-size: 2vw;
+  color: white;
+  width: 20%;
+}
+
+.instructions-text {
+  padding: 1vw;
+  width: 80%;
+  font-family: "Times";
+  font-size: 1.5vw;
+  color: white;
+}
+
+.door-row {
+  text-align: center;
+}
+
+.door-frame {
+  cursor: pointer;
+  padding: 2vw;
+}
+
+.start-row {
+  margin-left: 25%;
+  width: 50%;
+  height: auto;
+  font-family: "Times";
+  background-color: #e10000;
+  font-size: 3vw;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+/* Fading animation */
+
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:0; }
+    80%  { opacity:1; }
+    100% { opacity:0; }
+}
+.fading {
+    -webkit-animation: flickerAnimation 5s infinite;
+    margin-left: 25%;
+    padding: 25% 0;
+    width: 50%;
+}
   
