@@ -17,5 +17,5 @@ class QuoteForm(FlaskForm):
     html_render = HiddenField()
 
 class changePasswordForm(FlaskForm):
-    old_password = StringField("Old_assword", validators=[InputRequired()])
-    new_password = PasswordField("New_Password", validators=[InputRequired()])
+    old_password = StringField("Old password", validators=[InputRequired()])
+    new_password = PasswordField("New password", validators=[InputRequired()])

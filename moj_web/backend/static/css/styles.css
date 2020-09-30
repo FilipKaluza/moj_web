@@ -43,6 +43,21 @@ ul {
 color: #FFFFFF !important;
 }
 
+/* smooth dropdown */
+.dropdown-menu {
+  display: block;
+  visibility: hidden;
+  opacity:0;
+  transform: translateY(-2vw);
+  transition:.5s ease all;}
+
+.dropdown-menu.show {
+  display: block;
+  visibility: visible;
+  opacity:1;
+  transform: translateY(0px);
+  transition:.5s ease all;}
+
 .goals {
 background-color: #000000;
 font-size: 19px;
@@ -619,8 +634,8 @@ font-weight: 400;
   }
   /* CONTACT */
   .contactheader {
-    font-size: 70px;
-    font-family: Roboto, Arial;
+    font-size: 5vw;
+    font-family: Times;
     margin-top: 75px;
     width: 100%;
     text-align: center;
@@ -631,51 +646,76 @@ font-weight: 400;
     background-color: #e9ecef;
   }
 
-  .contactinfo h1 {
-    font-size: 50px;
-    margin-top: 30px;
-    font-family: Roboto, Arial;
-    text-align: center;
-    font-weight: 500;
-  }
-
-  .emailetc {
-    font-size: 30px;
-    font-family: Roboto, Arial;
-    text-align: left;
-    padding-left: 18%;
-    font-weight: 400;
-  }
 
   /* Adminpage */
   .login_form {
-    margin-top: 100px;
+    margin-top: 150px;
+    font-size: 2.5vw;
+    font-family: Times;
+    width: 30%;
   }
 
   .adminpage {
-    margin-top: 100px;
+    margin-top: 150px;
+  }
+
+  .settings_header {
+    font-family: Times;
+    font-size: 5vw;
+    text-align: left;
+  }
+
+  .settings_functions {
+    font-family: Times;
+    font-size: 2vw;
+    text-align: left;
+    padding-bottom: 0.5vw;
+  }
+
+  .quotes_settings {
+    font-family: Times;
+    font-size: 3vw;
+    text-align: left;
+    padding-right: 2%;
+    width: 25%;
+    margin-left: 2%;
+  }
+
+  .add_new_quote {
+    font-family: Times;
+    font-size: 1.5vw;
+    width: 23%;
+    height: 3vw;
+    vertical-align: middle;
+    padding-top: 0.25vw;
+    margin-top: 0.5vw;
+  }
+
+  .quotes_table {
+    margin-top: 1vw;
+    font-family: Times;
+    width: 50%;
+  }
+
+  .pagination_admin {
+    width: 50%;
   }
 
   .change_password {
-    margin-top: 100px;
+    margin-top: 150px;
   }
 
   .quote_editor {
     margin-top: 150px;
+    font-family: Times;
+    font-size: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
   }
 
   /* FOOTER */
-
-  .footer {
-    text-align: center;
-    background-color:#bbb;
-    font-family: Roboto, Arial;
-    font-size: 15px;
-    margin-top: 5%;
-  }
-
-  .logout_btn {
-    margin-top: 5%;
+  .page-footer {
+    background-color: #FFF;
   }
 }
 

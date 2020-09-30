@@ -1,9 +1,67 @@
-{% if "logged" in session %}
-    <a href={{ url_for("admin.logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
-{% endif %}
-<footer class="footer">
+<footer class="page-footer font-small">
     <div class="container-fluid">
-        <span> (c) 2020 Filip Kaluža </span>
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                <a href="#">Home</a>
+                </h6>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                <a href="#!">About me</a>
+                </h6>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                <a href="#!">Games</a>
+                </h6>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                <a href="#!">Contact</a>
+                </h6>
+            </div>
+
+            <div class="col-md-2 mb-3">
+                <h6 class="text-uppercase font-weight-bold">
+                <a href="#!">Admin</a>
+                </h6>
+            </div>
+        </div>
+
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+        <div class="row pb-3">
+            <div class="col-md-12">
+                <div class="mb-5 flex-center">
+
+                    <!-- Facebook -->
+                    <a class="fb-ic">
+                        <i class="fab fa-facebook-f fa-lg blue-text mr-4"> </i>
+                    </a>
+
+                    <!--Linkedin -->
+                    <a class="li-ic">
+                        <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic">
+                        <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src={{url_for("static", filename="js/script.js") }}></script>
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <p> Filip Kaluža </p>
+    </div>
+<script src={{url_for("static", filename="js/script.js") }}></script>
 </footer>
+
+

@@ -5,7 +5,7 @@
 {% block main %}
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-6 login_form">
+        <div class="col-4 login_form">
             <form action="{{url_for("admin.login_user")}}", method=post>
                 {{ form.csrf_token }}
                 <div class="form-group">
@@ -16,7 +16,7 @@
                     {{ form.password.label }} 
                     {{ form.password(class="form-control") }}
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Log in</button>
             </form>
         </div> {# col 6 #}
     </div> {# row #}

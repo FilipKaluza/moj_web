@@ -1,101 +1,202 @@
 html {
-  background-color: black;
+    background-color: black;
 }
 
-.container-fluid {
-  padding: 0;
+@media screen and (min-width: 651px) {
+    .container-fluid {
+      padding: 0;
+    }
+    
+    body {
+      background-color:black;;
+    }
+    
+    .footer {
+      margin: 0;
+    }
+    
+    .choredoor {
+      display: none;
+    }
+    
+    .gamebg {
+      background: black;
+    }
+      
+    .header {
+      text-align: center;
+      margin-top: 8vw;
+      max-width: 50%;
+      height: auto;
+      margin-left: 25%;
+    }
+    
+    .instructions-title {
+      font-size: 4vw;
+      color: white;
+      font-family: "Times";
+      width: 33.3%;
+      text-align: center;
+      margin-left: 5%;
+    }
+    
+    .instruction-row {
+      text-align: left;
+      width: 95%;
+      margin-left: 5%;
+    }
+    
+    .title-row {
+      text-align: center;
+    }
+    
+    .instructions-number {
+      padding-right: 1vw;
+      font-family: "Times";
+      font-size: 2vw;
+      color: white;
+      width: 20%;
+    }
+    
+    .instructions-text {
+      padding: 1vw;
+      width: 80%;
+      font-family: "Times";
+      font-size: 1.5vw;
+      color: white;
+    }
+    
+    .door-row {
+      text-align: center;
+    }
+    
+    .door-frame {
+      cursor: pointer;
+      padding: 2vw;
+      margin-top: 5%;
+    }
+    
+    .start-row {
+      margin: 5% 0 0 25%;
+      width: 50%;
+      height: auto;
+      font-family: "Times";
+      background-color: #e10000;
+      font-size: 3vw;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+    
+    /* Fading animation */
+    
+    @-webkit-keyframes flickerAnimation{
+        0%   { opacity:0; }
+        80%  { opacity:1; }
+        100% { opacity:0; }
+    }
+    .fading {
+        -webkit-animation: flickerAnimation 5s infinite;
+        margin-left: 25%;
+        padding: 25% 0;
+        width: 50%;
+    }  
 }
 
-body {
-  background-color:black;;
-}
+@media screen and (max-width: 650px) {
+    .container-fluid {
+      padding: 0;
+    }
+    
+    body {
+      background-color:black;;
+    }
+    
+    .footer {
+      margin: 0;
+    }
+    
+    .choredoor {
+      display: none;
+    }
+    
+    .gamebg {
+      background: black;
+    }
+      
+    .header {
+      text-align: center;
+      margin-top: 25%;
+      max-width: 75%;
+      height: auto;
+      margin-left: 12.5%;
+    }
 
-.footer {
-  margin: 0;
-}
+    .instructions-title {
+      font-size: 6vw;
+      color: white;
+      font-family: "Times";
+      width: 100%;
+      text-align: center;
+      padding: 2vw 0;
+    }
+    
+    .instruction-row{
+      width: 80%;
+      margin: 0 10%;
+    }
+    
 
-.choredoor {
-  display: none;
+    .instructions-number {
+      font-family: "Times";
+      font-size: 3vw;
+      color: white;
+      padding: 1.5vw;
+    }
+    
+    .instructions-text {
+      font-family: "Times";
+      font-size: 3vw;
+      color: white;
+      padding: 0.5vw;
+    }
+    
+    .door-row {
+      text-align: center;
+    }
+    
+    .door-frame {
+      cursor: pointer;
+      padding: 2vw;
+      margin-top: 5%;
+      max-width: 30%;
+      height: auto;
+    }
+    
+    .start-row {
+      margin: 5% 0 5% 25%;
+      width: 50%;
+      height: auto;
+      font-family: "Times";
+      background-color: #e10000;
+      font-size: 3vw;
+      text-align: center;
+      color: white;
+      cursor: pointer;
+    }
+    
+    /* Fading animation */
+    
+    @-webkit-keyframes flickerAnimation{
+        0%   { opacity:0; }
+        80%  { opacity:1; }
+        100% { opacity:0; }
+    }
+    .fading {
+        -webkit-animation: flickerAnimation 5s infinite;
+        margin-left: 25%;
+        padding: 25% 0;
+        width: 50%;
+        margin-top: 10%;
+    }  
 }
-
-.gamebg {
-  background: black;
-}
-  
-.header {
-  text-align: center;
-  margin-top: 8vw;
-  max-width: 50%;
-  height: auto;
-  margin-left: 25%;
-}
-
-.instruction-row {
-  text-align: left;
-  width: 95%;
-  margin-left: 5%;
-}
-
-.title-row {
-  text-align: center;
-}
-
-.instructions-title {
-  font-size: 4vw;
-  color: white;
-  font-family: "Times";
-  width: 100%;
-  text-align: left;
-}
-
-.instructions-number {
-  padding-right: 1vw;
-  font-family: "Times";
-  font-size: 2vw;
-  color: white;
-  width: 20%;
-}
-
-.instructions-text {
-  padding: 1vw;
-  width: 80%;
-  font-family: "Times";
-  font-size: 1.5vw;
-  color: white;
-}
-
-.door-row {
-  text-align: center;
-}
-
-.door-frame {
-  cursor: pointer;
-  padding: 2vw;
-}
-
-.start-row {
-  margin-left: 25%;
-  width: 50%;
-  height: auto;
-  font-family: "Times";
-  background-color: #e10000;
-  font-size: 3vw;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-}
-
-/* Fading animation */
-
-@-webkit-keyframes flickerAnimation{
-    0%   { opacity:0; }
-    80%  { opacity:1; }
-    100% { opacity:0; }
-}
-.fading {
-    -webkit-animation: flickerAnimation 5s infinite;
-    margin-left: 25%;
-    padding: 25% 0;
-    width: 50%;
-}
-  
