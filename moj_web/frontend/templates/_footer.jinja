@@ -1,64 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <footer class="page-footer font-small">
     <div class="container-fluid">
-        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+        <div class="footer_nav row text-center d-flex justify-content-center pt-5 mb-3">
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                <a href="#">Home</a>
+                <a href="{{ url_for("home.view_homepage") }}">Home</a>
                 </h6>
             </div>
 
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                <a href="#!">About me</a>
+                <a href="{{ url_for("about.view_aboutmepage") }}">About me</a>
                 </h6>
             </div>
 
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                <a href="#!">Games</a>
+                <a href="{{ url_for("games.view_gameslist") }}">Games</a>
                 </h6>
             </div>
 
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                <a href="#!">Contact</a>
+                <a href="{{ url_for("view_contact") }}">Contact</a>
                 </h6>
             </div>
 
             <div class="col-md-2 mb-3">
                 <h6 class="text-uppercase font-weight-bold">
-                <a href="#!">Admin</a>
+                <a href="{{ url_for("admin.view_adminpage") }}"> Admin</a>
                 </h6>
             </div>
         </div>
 
-    <hr class="rgba-white-light" style="margin: 0 15%;">
+        <hr class="rgba-white-light" >
 
-    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
-
-        <div class="row pb-3">
-            <div class="col-md-12">
-                <div class="mb-5 flex-center">
-
-                    <!-- Facebook -->
-                    <a class="fb-ic">
-                        <i class="fab fa-facebook-f fa-lg blue-text mr-4"> </i>
-                    </a>
-
-                    <!--Linkedin -->
-                    <a class="li-ic">
-                        <i class="fab fa-linkedin-in fa-lg white-text mr-4"> </i>
-                    </a>
-                    <!--Instagram-->
-                    <a class="ins-ic">
-                        <i class="fab fa-instagram fa-lg white-text mr-4"> </i>
-                    </a>
-                </div>
+        <!-- Social buttons -->
+        <div class="icon-bar social_media_buttons row">
+            <div class="icons">
+                <a href="https://www.facebook.com/filip.kaluza.9/" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/filipkaluza/?hl=en" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/filip-kalu%C5%BEa-9a87b81b7/" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
         </div>
+        <!-- Social buttons -->
     </div>
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="footer-copyright text-center">© 2020 Copyright:
         <p> Filip Kaluža </p>
     </div>
 <script src={{url_for("static", filename="js/script.js") }}></script>

@@ -1,5 +1,10 @@
+import os
+
 DEBUG = True
 #DATABASE = "/vagrant/blog.db"
 SQLALCHEMY_DATABASE_URI = "sqlite:////vagrant/quotes.db"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-SECRET_KEY = b'\x1b\n\xc8\xa0\xcf\xd1\xear\x7f\xf3\xeas$\x05\xd1\xf7[!\x17\xd4\xab!p\xda'
+SECRET_KEY = os.environ.get("MOJ_WEB_SECRET_KEY", None)
+
+RECAPTCHA_PRIVATE_KEY= os.environ.get("MOJ_WEB_RECAPTCHA_SECRETKEY", None)
+

@@ -169,7 +169,7 @@ font-weight: 400;
   }
 
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: #e10000;
     color: white;
     transform: rotateY(180deg);
   }
@@ -384,16 +384,31 @@ font-weight: 400;
 
   /* FOOTER */
 
-  .footer {
-    text-align: center;
-    background-color:#bbb;
-    font-family: Roboto, Arial;
-    font-size: 3vw;
-    margin-top: 20%;
+  .page-footer {
+    background-color: #e10000;
   }
 
-  .logout_btn {
-    margin-top: 5%;
+  .social_media_buttons a {
+    font-size: 36px;
+    color: #FFF;
+    margin: 2% 5%;
+  }
+
+  .icons {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer_nav a {
+    color: #FFF;
+  }
+
+  .footer-copyright {
+    background-color: #FF6565;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 5px 0;
   }
 }
 
@@ -462,7 +477,7 @@ font-weight: 400;
 
 
   .flip-card-back {
-    background-color: #2980b9;
+    background-color: #e10000;
     color: white;
     transform: rotateY(180deg);
   }
@@ -633,19 +648,37 @@ font-weight: 400;
     to {opacity: 1}
   }
   /* CONTACT */
-  .contactheader {
-    font-size: 5vw;
-    font-family: Times;
-    margin-top: 75px;
+
+  .map iframe{
     width: 100%;
-    text-align: center;
-    font-weight: 600;
+    height: 450px;
+  } 
+
+  .contact_form_header {
+    background-color: #e10000;
+    width: 100%;
+    height: 120px;
+    padding: 30px;
+    margin-bottom: 20px;
   }
 
-  .contactinfo {
-    background-color: #e9ecef;
+  .input-group-text {
+    height: 60px;
   }
 
+  .form-control {
+    height: 60px;
+  }
+  
+  .input-group i {
+    width: 100%;
+    color: #e10000;
+  }
+
+  .contact_btn {
+    height: 80px;
+    background-color: #e10000;
+  }
 
   /* Adminpage */
   .login_form {
@@ -715,9 +748,34 @@ font-weight: 400;
 
   /* FOOTER */
   .page-footer {
-    background-color: #FFF;
+    background-color: #e10000;
+  }
+
+  .social_media_buttons a {
+    font-size: 36px;
+    color: #FFF;
+    margin: 2% 5%;
+  }
+
+  .icons {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer_nav a{
+    color: #FFF;
+  }
+
+  .social_media_buttons .fa {
+    margin: 0 30px;
+  }
+
+  .footer-copyright {
+    background-color: #FF6565;
+    color: #FFF;
+    font-size: 20px;
+    font-family: Times;
+    font-weight: 500;
+    margin: 1% 0;
   }
 }
-
-
-
