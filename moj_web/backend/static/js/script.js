@@ -51,11 +51,14 @@ function showSlides(n) {
 
 automaticSlides()
 
-const screenSize = () => {
-  let w = window.innerWidth;
-  if(w < 600) {
-    return 1
+const scrollFunction = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementsById("nav").style.opacity = "0.8";
   } else {
-    return 2
+    document.getElementsById("nav").style.opacity = "1";
   }
 }
+
+
+window.onscroll = scrollFunction();
+

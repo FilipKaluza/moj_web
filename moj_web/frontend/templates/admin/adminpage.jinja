@@ -3,9 +3,9 @@
 {% block title %} Admin page {% endblock %}
 
 {% block main %}
-<div class="container-fluid adminpage" >
+<section class="adminpage container">
     <div class="row">
-        <div class="settings col col-9 col-md-6">
+        <div class="settings col col-12 col-md-6">
             <h2 class="settings_header"> Settings </h2>
             <div class="settings_functions">
                 <p><a href={{ url_for("admin.view_change_password") }}>Change password</a></p>
@@ -13,9 +13,9 @@
                 <p><a href=#>Other other function</a></p>
                 <hr/>
             </div>
-            <div class="row">
-                <h2 class="quotes_settings"> Quotes</h2>
-                <a href={{ url_for("admin.view_add_quote") }} role="button" class="btn btn-primary add_new_quote">Add new quote</a>
+            <div class="row quotes_settings">
+                <h2 class="col col-12 col-md-6"> Quotes</h2>
+                <a href={{ url_for("admin.view_add_quote") }} role="button" class="btn btn-primary add_new_quote col col-12 col-md-6">Add new quote</a>
             </div>
             {# CREATE TABLE #}
             <table class="table table-hover table-bordered quotes_table">
@@ -40,7 +40,7 @@
 
 
             {# PAGINATION #}
-            <ul class="pagination pagination_admin justify-content-center mt-3">
+            <ul class="pagination pagination_admin justify-content-center">
 
             {# add previous button #}
             {% if paginate.has_prev %}
@@ -71,7 +71,7 @@
             {% endif %}
             </ul>
             </div>
-        <img class="settings_img col-3 col-md-6" src="{{ url_for("static", filename="images/settingslogo.png") }}" >
-    </div>
-</div>
-    {% endblock %}
+        <img class="settings_img col-1 col-md-6" src="{{ url_for("static", filename="images/settingslogo.png") }}" >
+    </div> {# END ROW #}
+</section>
+{% endblock %}

@@ -10,26 +10,29 @@
 {% endblock %}
 
 {% block main %}
+
 <div class="quote_editor">
     {% if quote %}
+        <h1> Edit quote </h1>
         <form action="{{ url_for("admin.edit_quote", quote_id=quote.id) }}" method="post">
         {% else %}
+        <h1> Add new quote </h1>
         <form action="{{ url_for("admin.add_quote") }}" method="post">
         {% endif %}    
             {{ form.csrf_token }} {# pre bezpečnosť, proti cross-site request forgery #}
             <div class="form-group">
                 {{ form.author.label }}
-                {{ form.author(class="form-control", placeholder="Quote title") }}
+                {{ form.author(class="form-control", placeholder="Author of quote") }}
                 
             </div>
             <div class="form-group">
                 {{ form.content.label }}
-                {{ form.content() }}
+                {{ form.content(class="form-control", placeholder="Quote") }}
             </div>
             <div class="form-group">
                 {{ form.html_render() }}
             </div>
-            <input type="submit" class="btn btn-success" value="SAVE">
+            <input type="submit" class="btn btn-danger quote_editor_btn" value="SAVE">
         </form>
 </div>
 {% endblock %}

@@ -12,7 +12,7 @@ class loginForm(FlaskForm):
     password = PasswordField("Password", validators=[InputRequired()])
 
 class QuoteForm(FlaskForm):
-    author= StringField("Title", validators=[InputRequired()])
+    author= StringField("Author", validators=[InputRequired()])
     content = TextAreaField("Content")
     html_render = HiddenField()
 

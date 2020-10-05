@@ -1,132 +1,143 @@
-/*Interactive BG*/
-
-body {
-  background-image: url("../images/bg1.png");
-}
-
-h1 {
-  text-align: center;
-}
-
-/* NAVBAR */
-nav {
-  margin: 10px 25px;
-  border-radius: 10px;
-  padding: 0px;
-  opacity: 0.8;
-  background-color: #000000;
-  position: absolute;
-  z-index: 1;
-}
-
-nav:hover {
-  opacity: 1;
-}
-
-ul {
-  font-family: Times;
-  font-weight: 600;
-  font-size: 23px;
-}
-
-.navbar-toogler-icon {
-  color: #FF0000;
-  background-color: red;
-  position: relative;
-}
-
-.navbar-nav > li {
-  padding-right: 35px;
-}
-
-.navbar li a {
-color: #FFFFFF !important;
-}
-
-/* smooth dropdown */
-.dropdown-menu {
-  display: block;
-  visibility: hidden;
-  opacity:0;
-  transform: translateY(-2vw);
-  transition:.5s ease all;}
-
-.dropdown-menu.show {
-  display: block;
-  visibility: visible;
-  opacity:1;
-  transform: translateY(0px);
-  transition:.5s ease all;}
-
-.goals {
-background-color: #000000;
-font-size: 19px;
-font-weight: 400;
-}
-
-/* MAIN - PICTURE */
-
-.picture {
-    max-width: 100%;
-    height: auto;
-    margin: 130px 10px 10px 10px;
-    border-radius: 50px 100px 100px 30px;
-    display: block;
-}
-
-.thumbnail {
-  position: relative;
-  display: inline-block;
-}
-
-.maintxt {
-  padding: 15px;
-  width: 75%;
-  background-color: #FFFFFF;
-  opacity: 0.7;
-  position: absolute;
-  left:12.5%;
-  top: 50%;
-  text-align: center;
-  opacity: 0.7;
-  background-color: #FFFFFF;
-}
-
-.maintxt h1 {
-  font-family: Times;
-  font-weight: 600;
-  font-size: 4.5vw;
-  opacity: 0.8;
-}
-
-.maintxt h3 {
-  font-family: Times;
-  font-weight: 600;
-  font-size: 2.5vw;
-}
 
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 650px) {
+
+  .container-fluid {
+    background-color: #000000;
+  }
+  /* NAVBAR * / All pages */
+  nav {
+    height: 80px;
+    width: auto;
+    padding: 0px;
+    opacity: 1;
+    background-color: #000000;
+    position: absolute;
+    z-index: 1;
+    transition: 0.2s;
+  }
+
+  nav img {
+    margin: 0;
+    height: 50px;
+    width: auto;
+  }
+
+  ul {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 23px;
+  }
+
+  .navbar-nav > li {
+    padding-right: 35px;
+  }
+
+  .navbar li a {
+    color: #FFFFFF !important;
+  }
+
+  .navbar li a:hover {
+    color: #e10000 !important;
+  }
+
+  /* smooth dropdown */
+  .dropdown-menu {
+    display: block;
+    opacity:0;
+    transform: translateY(-2vw);
+    transition:.5s ease all;}
+
+  .dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    opacity:1;
+    transform: translateY(0px);
+    transition:.5s ease all;}
+
+  .gamesnav{
+    background-color: #000000;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .navbar-collapse {
+    background-color: #000000;
+    opacity: 0.8;
+    padding: 30px;
+  }
+  
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* MAIN - PICTURE / Homepage*/
+
+  .picture {
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+  }
+
+  .thumbnail {
+    position: relative;
+    display: inline-block;
+  }
+
+  .maintxt {
+    padding: 15px;
+    width: 75%;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    position: absolute;
+    left:12.5%;
+    top: 50%;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #FFFFFF;
+  }
+
+  .maintxt h1 {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 9vw;
+    opacity: 0.8;
+  }
+
+  .maintxt h3 {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 4vw;
+  }
+
+  /* FIP RULE - Homepage */
+  .three_things_bg {
+    background-color: #000000;
+  }
+
   .threethingsheader h1 {
     font-family: Times;
     font-weight: 600;
     font-size: 60x;
     transform: rotate(-1deg);
-    padding-bottom: 5px;
+    padding: 10px 0;
     text-align: center;
+    color: #FFF;
     }
 
   .card-title {
-    font-family: Roboto Arial;
-    font-size: 7.0vw;
+    font-family: Times;
+    font-size: 9vw;
     text-align: center;
     font-weight: 500;
     padding-top: 65px;
   }
 
   .card-text {
-    font-family: Roboto Arial;
-    font-size: 4vw;
+    font-family: Times;
+    font-size: 5.9vw;
     text-align: justify;
     font-weight: 500;
     padding-left: 2%;
@@ -164,7 +175,7 @@ font-weight: 400;
   }
 
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #FFF;
     color: black;
   }
 
@@ -175,12 +186,13 @@ font-weight: 400;
   }
   /* Quotes */
   .quotesheader h1 {
-    font-family: Roboto Arial;
+    font-family: Times;
     font-weight: 600;
     font-size: 60px;
     transform: rotate(-1deg);
     padding-bottom: 5px;
     text-align: center;
+    color: #e10000;
   }
 
   .card {
@@ -188,6 +200,12 @@ font-weight: 400;
     height: auto;
     padding: 0;
     margin: 3% 9%;
+  }
+
+  /* QUOTES / Homepage */
+  .quotes {
+    margin: 0;
+    background-color: #FFF !important;
   }
 
   .quotetext {
@@ -211,15 +229,33 @@ font-weight: 400;
     font-weight: 800;
     font-size: 3.5vw;
   }
+
+  .pagination a{
+    color: #e10000;
+  }
+
+  .pagination a:hover {
+    color: #000;
+  }
+
+  .pagination {
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
   /* My profile * - photo + slider with skills*/
-  /*photo*/
+  /*photo* / aboutmepage */
+
+  .perinfo {
+    margin-top: 100px;
+  }
   
   .headerpersonal {
     font-family: Times;
     font-size: 7vw;
-    padding-top: 25%;
-    margin-bottom: 5%;
     font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
   }
 
   .my_name {
@@ -227,17 +263,21 @@ font-weight: 400;
     padding: 5%;
     font-weight: 60;
     font-family: Times;
+    text-align: center;
   }
 
   .myphoto {
     width: 60%;
+    margin-left: 20%;
     max-height: auto;
   }
 
   .perinfocard {
     width: 80%;
+    margin-left: 10%;
     max-height: 700px;
     border: 3px solid #000000;
+    border-radius: 30px;
     background-image: url("../images/bg-photo2.png");
   }
 
@@ -245,13 +285,25 @@ font-weight: 400;
     font-family: Times;
     padding: 5%;
     text-align: justify;
+    font-size: 18px;
   }
 
-  /*slider*/
+  .perinfocard a {
+    width: 50%;
+    margin-left: 25%;
+    color: #FFF;
+    background-color: #000;
+    border: 5px solid #000;
+    border-radius: 10px;
+  }
+
+  /*slider* / aboutmepage */
   .slideshow-container {
     position: relative;
-    width: 80%;
+    max-width: 80%;
     height: auto;
+    margin-left: 10%;
+    margin-bottom: 85px;
   }
 
   /* Hide the images by default */
@@ -263,7 +315,7 @@ font-weight: 400;
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 35%;
     width: auto;
     margin-bottom: 16px;
     padding: 22px;
@@ -277,11 +329,11 @@ font-weight: 400;
 
   /* Positions of buttons on slider*/
   .prev {
-    right: 85%;
+    right: 80%;
   }
 
   .next {
-    margin-left: 35%;
+    margin-left:80%;
   }
 
   /* On hover, add a black background color with a little bit see-through */
@@ -292,11 +344,11 @@ font-weight: 400;
   /* Caption text */
   .text {
     color: #000000;
-    font-family: Roboto Arial;
+    font-family: Times;
     font-size: 35px;
     padding: 10px 5px;
     position: absolute;
-    top: 115%;
+    top: 100%;
     width: 100%;
     text-align: center;
   }
@@ -335,63 +387,189 @@ font-weight: 400;
     from {opacity: .2}
     to {opacity: 1}
   }
-  /* CONTACT */
+
+  .mySlides img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* CONTACT * / contactpage */
+
   .contactheader {
-    font-size: 70px;
-    font-family: Roboto, Arial;
-    margin-top: 75px;
+    font-size: 30px;
+    font-family: Times;
+    margin-top: 100px;
     width: 100%;
     text-align: center;
     font-weight: 600;
   }
 
-  .contactinfo {
-    background-color: #e9ecef;
+  .map {
+    max-width: 80%;
+    height: auto;
+    margin: 0 10% 5% 10%;
   }
 
-  .contactinfo h1 {
-    font-size: 50px;
-    margin-top: 30px;
-    font-family: Roboto, Arial;
+  /* CONTACT FORM */
+
+  .contact_form {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+
+  .contact_form_header {
+    background-color: #e10000;
+    height: 90px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  .input-group-text {
+    height: 45px;
+  }
+
+  .form-control {
+    height: 45px;
+  }
+  
+  .input-group i {
+    width: 100%;
+    color: #e10000;
+  }
+
+  .contact_btn {
+    height: 50px;
+    background-color: #e10000;
+    font-size: 20px;
+  }
+
+  /* Adminpage * / admipage */
+
+  .log_in h1 {
     text-align: center;
-    font-weight: 500;
-  }
-
-  .emailetc {
-    font-size: 30px;
-    font-family: Roboto, Arial;
-    text-align: left;
-    padding-left: 18%;
+    font-family: Times;
+    font-size: 20px;;
+    margin-top: 100px;
+    margin-bottom: 5%;
     font-weight: 400;
   }
 
-  /* Adminpage */
-  .login_form {
-    margin-top: 100px;
+  .login_form  {
+    width: 80%;
+    margin-left: 20%;
+    font-family: Times;
+    font-weight: 600;
+    margin-bottom: 5%;
   }
 
-  .adminpage {
+  .log_in_field {
+    width: 80%;
+  }
+
+  .log_in_btn {
+    width: 80%;
+    background-color: #e10000;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .settings_img {
+    visibility: hidden;
+  }
+
+  .settings_header {
     margin-top: 100px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+  }
+
+  .settings_functions {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .settings_functions a {
+    color: #e10000;
+  }
+
+  .settings_functions a:hover {
+    color: #000;
+  }
+
+  .quotes_settings {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+  }
+
+  .add_new_quote {
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
+
+  .quotes_table {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+  }
+
+  .pagination_admin {
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+
+  /* Edit quote and add new quote */
+  .quote_editor {
+    margin-top: 100px;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+
+  .quote_editor h1 {
+    text-align: center;
+  }
+
+  .quote_editor_btn {
+    width: 100%;
+    border: 5px solid #13da13;
+    border-radius: 10px;
+    background-color: #13da13;
+    color: #000;
   }
 
   .change_password {
     margin-top: 100px;
+    margin-bottom: 5%;
   }
 
-  .quote_editor {
-    margin-top: 150px;
+  .change_password h3 {
+    margin-bottom: 5%;
+  }
+
+  .change_pw_btn {
+    width: 100%;
+    border: 5px solid #13da13;
+    border-radius: 10px;
+    background-color: #13da13;
+    color: #000;
   }
 
   /* FOOTER */
 
   .page-footer {
-    background-color: #e10000;
+    background-color: #000000;
   }
 
   .social_media_buttons a {
     font-size: 36px;
     color: #FFF;
-    margin: 2% 5%;
+    margin-bottom: 10px;
+    padding: 0 5px;
   }
 
   .icons {
@@ -404,15 +582,108 @@ font-weight: 400;
   }
 
   .footer-copyright {
-    background-color: #FF6565;
+    background-color: #000000;
     color: #FFF;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 500;
-    margin: 5px 0;
+    padding: 5px;
   }
 }
 
 @media screen and (min-width: 651px) {
+  /* NAVBAR */
+  nav {
+    margin: 10px 25px;
+    border-radius: 10px;
+    padding: 0px;
+    opacity: 0.8;
+    background-color: #000000;
+    position: absolute;
+    z-index: 1;
+  }
+
+  nav:hover {
+    opacity: 1;
+  }
+
+  ul {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 23px;
+  }
+
+  .navbar-nav > li {
+    padding-right: 35px;
+  }
+
+  .navbar li a {
+    color: #FFFFFF !important;
+  }
+
+  .navbar li a:hover {
+    color: #e10000 !important;
+  }
+
+  /* smooth dropdown */
+  .dropdown-menu {
+    display: block;
+    opacity:0;
+    transform: translateY(-2vw);
+    transition:.5s ease all;}
+
+  .dropdown-menu.show {
+    display: block;
+    visibility: visible;
+    opacity:1;
+    transform: translateY(0px);
+    transition:.5s ease all;}
+
+  .gamesnav{
+    background-color: #000000;
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  /* MAIN - PICTURE */
+
+  .picture {
+      max-width: 100%;
+      height: auto;
+      margin: 130px 10px 10px 10px;
+      border-radius: 50px 100px 100px 30px;
+      display: block;
+  }
+
+  .thumbnail {
+    position: relative;
+    display: inline-block;
+  }
+
+  .maintxt {
+    padding: 15px;
+    width: 75%;
+    background-color: #FFFFFF;
+    opacity: 0.7;
+    position: absolute;
+    left:12.5%;
+    top: 50%;
+    text-align: center;
+    opacity: 0.7;
+    background-color: #FFFFFF;
+  }
+
+  .maintxt h1 {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 4.5vw;
+    opacity: 0.8;
+  }
+
+  .maintxt h3 {
+    font-family: Times;
+    font-weight: 600;
+    font-size: 2.5vw;
+  }
 
   /* imp things*/
   .threethingsheader h1 {
@@ -484,7 +755,7 @@ font-weight: 400;
 
   /* Quotes */
   .quotesheader h1 {
-    font-family: Roboto Arial;
+    font-family: Times;
     font-weight: 600;
     font-size: 5vw;
     transform: rotate(-1deg);
@@ -776,6 +1047,6 @@ font-weight: 400;
     font-size: 20px;
     font-family: Times;
     font-weight: 500;
-    margin: 1% 0;
+    margin: 1% 0 0 0;
   }
 }

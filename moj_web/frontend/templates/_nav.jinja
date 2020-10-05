@@ -1,41 +1,43 @@
-<div class="container-fluid nav">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light border border-dark">
-      <a class="navbar-brand" href="{{ url_for("home.view_homepage") }}">
-        <img class="img-brand-top" src={{url_for("static", filename="images/logo1.png")}}>
-      </a>
-      <button class="navbar-toggler btn-danger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toogler-icon text-dark"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href={{ url_for("home.view_homepage") }}>HOME<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href={{ url_for("about.view_aboutmepage") }}>ABOUT ME</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href={{ url_for("games.view_gameslist")}} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              GAMES
-            </a>
-            <div class="dropdown-menu goals" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href={{ url_for("games.play_choredoor")}}>Chore door</a>
-              <a class="dropdown-item" href="#"></a>
-              <a class="dropdown-item" href={{ url_for("games.view_gameslist")}}>Zobraziť všetky hry</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href={{ url_for("view_contact")}}>CONTACT</a>
-          </li>
-          <li class="nav-item admin">
-            <a class="nav-link" href={{ url_for("admin.view_adminpage")}}>Admin</a>
-          </li>
-          {% if "logged" in session %}
-          <li class="nav-item">
-            <a href={{ url_for("admin.logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
-          </li>
-          {% endif %}
-        </ul>
+{# NAVBAR #}
+<div class="container-fluid nav bg-dark" id="nav">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        {# LOGO #}
+        <a class="navbar-brand" href="{{ url_for("home.view_homepage") }}"> 
+          <img class="img-brand-top" src={{url_for("static", filename="images/logo1.png")}}>
+        </a>
+        {# MOBILE BUTTON #}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        {# NAV #}
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href={{ url_for("home.view_homepage") }}>HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ url_for("about.view_aboutmepage") }}>ABOUT ME</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href={{ url_for("games.view_gameslist")}} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+                      GAMES
+                    </a>
+                    <div class="dropdown-menu gamesnav" aria-labelledby="navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="dropdown navigation">
+                      <a class="dropdown-item" href={{ url_for("games.play_choredoor")}}>Chore door</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href={{ url_for("view_contact")}}>CONTACT</a>
+                </li>
+                <li class="nav-item admin">
+                    <a class="nav-link" href={{ url_for("admin.view_adminpage")}}>Admin</a>
+                </li>
+                {% if "logged" in session %}
+                <li class="nav-item">
+                    <a href={{ url_for("admin.logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
+                </li>
+                {% endif %}
+            </ul>
       </div>
     </nav>
 </div>

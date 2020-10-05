@@ -3,58 +3,63 @@
 {% block title %} Welcome to Bedeve {% endblock %}
 
 {% block main %}
-    {# main picture #}
-    <div class="thumbnail">
-        <img class="picture img-fluid" src="{{url_for("static", filename="images/main.png") }}" >
-        <div class="maintxt centered">
-            <h1> BE DEVEloper </h1>
-            <h3> Time to start coding ! </h3>
+{# main picture #}
+
+<section class="thumbnail">
+    <img class="picture img-fluid" src="{{url_for("static", filename="images/main.png") }}" >
+    <div class="maintxt centered">
+        <h1> BE DEVEloper </h1>
+        <h3> Time to start coding ! </h3>
+    </div>
+</section>
+      
+{# 3 things #}
+
+<section class="three_things_bg">
+    <div class="threethingsheader">
+        <div class="col col-12">
+            <h1> FIP RULE </h1>
         </div>
-    </div>
-    
-    {# 3 things #}
-    </div>
-        <div class="threethingsheader">
-      <div class="col col-12">
-        <h1> FIP RULE </h1>
-      </div>
     </div>
     <div class="row">
-      <div class="flip-card col-12 col-md-4">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h4 class="card-title">FUN</h4>
-          </div>
-          <div class="flip-card-back">
-            <p class="card-text">
-              It must be fun for you, that's the basis. Whatever you enjoy, you'll be good at it.</p>
-          </div>
+        <div class="flip-card col-12 col-md-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h4 class="card-title">FUN</h4>
+                </div>
+                <div class="flip-card-back">
+                    <p class="card-text">
+                      It must be fun for you, that's the basis. Whatever you enjoy, you'll be good at it.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="flip-card col-12 col-md-4">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h4 class="card-title">IMAGINATION</h4>
-          </div>
-          <div class="flip-card-back">
-            <p class="card-text">
-              Imagination is also important, if you are proposing something, you have to think about it in your head first.</p>
-          </div>
+        <div class="flip-card col-12 col-md-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h4 class="card-title">IMAGINATION</h4>
+                </div>
+                <div class="flip-card-back">
+                    <p class="card-text">Imagination is also important, if you are proposing something, you have to think about it in your head first.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="flip-card col-12 col-md-4">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <h4 class="card-title">PERSISTENCE</h4>
-          </div>
-          <div class="flip-card-back">
-            <p class="card-text">
-              You have to be persistent, it often happens that something doesn't work. If you want to be successful, you have to be persistent.</p>
-          </div>
+        <div class="flip-card col-12 col-md-4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <h4 class="card-title">PERSISTENCE</h4>
+                </div>
+                <div class="flip-card-back">
+                    <p class="card-text">You have to be persistent, it often happens that something doesn't work. If you want to be successful, you have to be persistent.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    {% include "quotes.jinja" %}
+</section>
+
+{# Import Quotes #}
+
+{% include "quotes.jinja" %}
+
 {% endblock %}
 
 

@@ -3,22 +3,23 @@
 {% block title %} Login {% endblock %}
 
 {% block main %}
-<div class="container-fluid">
+<section class="log_in" >
     <div class="row justify-content-center">
-        <div class="col-4 login_form">
+        <h1 class="col col-12 col-md-4"> To countinue, please log in. </h1>
+        <div class="col col-12 col-md-4 login_form">
             <form action="{{url_for("admin.login_user")}}", method=post>
                 {{ form.csrf_token }}
                 <div class="form-group">
                     {{ form.username.label }}
-                    {{ form.username(size=20, class="form-control") }}
+                    {{ form.username(size=20, class="form-control log_in_field") }}
                 </div>
                 <div class="form-group">
                     {{ form.password.label }} 
-                    {{ form.password(class="form-control") }}
+                    {{ form.password(class="form-control log_in_field") }}
                 </div>
-                <button type="submit" class="btn btn-primary">Log in</button>
+                <button type="submit" class="btn log_in_btn">LOG IN</button>
             </form>
-        </div> {# col 6 #}
+        </div> 
     </div> {# row #}
-</div> {# container #}
+</section 
 {% endblock %}
