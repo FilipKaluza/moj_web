@@ -4,13 +4,13 @@ sed -i '/AcceptEnv/s/^#*/#/' /etc/ssh/sshd_config
 
 #install Python 3.6
 apt-get install software-properties-common
-apt-get-repository ppa:deadsnakes/ppa
+add-apt-repository ppa:deadsnakes/ppa
 apt-get update
 apt-get install -y python3.6
 
 #update alternatives
-update-alternatives --instal /usr/bin/python3 python3 /usr/bin/python3.5 1
-update-alternatives --instal /usr/bin/python3 python3 /usr/bin/python3.6 2
+update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.5 1
+update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 2
 
 #install other dev tools
 apt-get install -y git python-dev

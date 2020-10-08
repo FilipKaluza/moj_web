@@ -19,10 +19,10 @@ Vagrant.configure("2") do |config|
     v.cpus = 2
   end
 
-  # public network => bridged ## kvôli ip-čke
-config.vm.network "public_network"
+    # public network => bridged ## kvôli ip-čke
+  config.vm.network "public_network"
 
-# install and cofigure software
-config.vm.provision :shell, :path => "bootstrap.sh"
-
+  # install and cofigure software
+  config.vm.provision :shell, :path => "bootstrap.sh"
+  
 end
