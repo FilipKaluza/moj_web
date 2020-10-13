@@ -19,3 +19,4 @@ class QuoteForm(FlaskForm):
 class changePasswordForm(FlaskForm):
     old_password = StringField("Old password", validators=[InputRequired()])
     new_password = PasswordField("New password", validators=[InputRequired()])
+    confirm_new_password = PasswordField("Repeat your new password", validators=[InputRequired()])

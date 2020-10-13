@@ -20,7 +20,6 @@ def login_required(func):
     @wraps(func)
     def decorated_function(*args, **kwargs):
         if "logged" not in session:
-            flash("You must be logged in", "alert-danger")
             return redirect(url_for("admin.view_login"))
         return func(*args, **kwargs)
     return decorated_function
@@ -55,7 +54,7 @@ def add_quote():
             html_render = add_form.html_render.data)
         db.session.add(new_quote)
         db.session.commit()
-        flash(u"Quote was added", category="alert-success")
+        flash(u"Quote was added", "quote_added")
         return redirect(url_for("admin.view_adminpage"))
 
 ## editácia citátu
@@ -109,17 +108,20 @@ def view_change_password():
 @login_required
 def change_password():
     form = changePasswordForm(request.form)
-    if form.validate():
+    if form.validate() and form.new_password.data == form.confirm_new_password.data:
         user = User.query.filter_by(username = session["logged"]).first()
         if user and user.check_password(form.old_password.data):
             user.set_password(form.new_password.data)
             db.session.add(user)
             db.session.commit()
-            flash("Password was changed", category="success")
-            return redirect(url_for("admin.view_adminpage"))
+            flash("Password was changed", "passwordChanged" )
+            return render_template("/admin/change_password_success.jinja")
         else:
-            flash(" Incorrect password, try again", "danger")
-            return redirect(url_for("admin.view_login"))
+            flash(" Incorrect old password, try again", "Invalid_usr_or_psw")
+            return redirect(url_for("admin.change_password"))
+    else:
+        flash("Your new passwords does not match", "Invalid_usr_or_psw")
+        return redirect(url_for("admin.change_password"))
 
 ##LOG IN
 @admin.route('/admin/login/', methods=["GET"])
@@ -134,10 +136,9 @@ def login_user():
         user = User.query.filter_by(username = login_form.username.data).first()
         if user and user.check_password(login_form.password.data):
             session["logged"] = user.username
-            flash("Login succesfull", category="success")
             return redirect(url_for("admin.view_adminpage"))
         else:
-            flash("Invalid username or password", category="danger")
+            flash("Invalid username or password", "Invalid_usr_or_psw")
             return redirect(url_for("admin.view_login"))
     else:
         for error in login_form.errors:
@@ -150,7 +151,7 @@ def login_user():
 @login_required
 def logout_user():
     session.pop("logged")
-    flash(u"You had been logged out", category="success")
-    return redirect(url_for("home.view_homepage"))
+    flash(u"You had been logged out", "log_out_flash")
+    return redirect(url_for("admin.view_login"))
 
 

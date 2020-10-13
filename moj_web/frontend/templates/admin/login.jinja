@@ -4,22 +4,31 @@
 
 {% block main %}
 <section class="log_in" >
-    <div class="row justify-content-center">
-        <h1 class="col col-12 col-md-4"> To countinue, please log in. </h1>
-        <div class="col col-12 col-md-4 login_form">
+    <div class="row justify-content-center login">
+        <h1 class="col col-12"> To countinue, please log in. </h1>
+        <div class="col col-12  col-md-6 login_form">
             <form action="{{url_for("admin.login_user")}}", method=post>
                 {{ form.csrf_token }}
                 <div class="form-group">
                     {{ form.username.label }}
-                    {{ form.username(size=20, class="form-control log_in_field") }}
+                    {{ form.username(size=20, class="form-control log_in_field", placeholder="Enter your username") }}
                 </div>
                 <div class="form-group">
                     {{ form.password.label }} 
-                    {{ form.password(class="form-control log_in_field") }}
+                    {{ form.password(class="form-control log_in_field", placeholder="Enter your password") }}
                 </div>
                 <button type="submit" class="btn log_in_btn">LOG IN</button>
             </form>
         </div> 
     </div> {# row #}
+    <div class="col-12">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category, message in messages %}
+                {% if message %}
+                    <h1 class="{{ category }}"> {{ message }}</h1>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    </div>
 </section 
 {% endblock %}

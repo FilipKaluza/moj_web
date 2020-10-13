@@ -1,9 +1,11 @@
+
+
 {# NAVBAR #}
-<div class="container-fluid nav bg-dark" id="nav">
+<div class="container-fluid nav bg-dark" id="navbar">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         {# LOGO #}
         <a class="navbar-brand" href="{{ url_for("home.view_homepage") }}"> 
-          <img class="img-brand-top" src={{url_for("static", filename="images/logo1.png")}}>
+        <img class="img-brand-top" src={{ url_for("static", filename="images/logo1.png")}}>
         </a>
         {# MOBILE BUTTON #}
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +22,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href={{ url_for("games.view_gameslist")}} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-                      GAMES
+                    GAMES
                     </a>
-                    <div class="dropdown-menu gamesnav" aria-labelledby="navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="dropdown navigation">
-                      <a class="dropdown-item" href={{ url_for("games.play_choredoor")}}>Chore door</a>
-                    </div>
+                    <ul class="dropdown-menu gamesnav" aria-labelledby="navbarDropdown" aria-controls="navbarSupportedContent" aria-expanded="hidden" aria-label="dropdown navigation">
+                    <li><a class="dropdown-item" href={{ url_for("games.play_choredoor")}}>Chore door</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href={{ url_for("view_contact")}}>CONTACT</a>
@@ -34,10 +36,24 @@
                 </li>
                 {% if "logged" in session %}
                 <li class="nav-item">
-                    <a href={{ url_for("admin.logout_user") }} role="button" class="btn btn-danger logout_btn">Logout</a>
+                    <a href={{ url_for("admin.logout_user") }}><button role="button" class="btn logout_btn">Logout</button></a>
                 </li>
                 {% endif %}
             </ul>
-      </div>
+        </div>
     </nav>
 </div>
+
+
+<script>
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 60) {
+    document.getElementById("navbar").style.opacity="0";
+  } else {
+    document.getElementById("navbar").style.opacity="1"
+  }
+}
+</script>

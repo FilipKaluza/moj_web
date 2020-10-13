@@ -1,3 +1,5 @@
+/* funcionality of slider / Aboutmepage  My_skills */
+
 let isRunning = false;
 
 let slideIndex = 1;
@@ -47,18 +49,8 @@ function showSlides(n) {
     isRunning = true;
     makeTrue(5000);
   };
+  let left = document.getElementsByClassName("perinfo").clientHeight;
 }
 
 automaticSlides()
-
-const scrollFunction = () => {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementsById("nav").style.opacity = "0.8";
-  } else {
-    document.getElementsById("nav").style.opacity = "1";
-  }
-}
-
-
-window.onscroll = scrollFunction();
 

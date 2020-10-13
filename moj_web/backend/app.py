@@ -59,7 +59,7 @@ def view_contact():
         mail.send(msg)
         return render_template('contact/contact.jinja', contactform=contactform)
     
-    elif request.method == 'GET':
+    else:
         return render_template('contact/contact.jinja', contactform=contactform)
 
 ## CLI COMMAND
