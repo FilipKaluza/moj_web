@@ -20,15 +20,16 @@
                 <button type="submit" class="btn log_in_btn">LOG IN</button>
             </form>
         </div> 
-    </div> {# row #}
-    <div class="col-12">
+        <div class="col-12">
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% for category, message in messages %}
                 {% if message %}
-                    <h1 class="{{ category }}"> {{ message }}</h1>
+                    <h2 class="{{ category }}"> {{ message }}</h2>
                 {% endif %}
             {% endfor %}
         {% endwith %}
-    </div>
+        </div>
+    </div> {# row #}
+    
 </section 
 {% endblock %}
