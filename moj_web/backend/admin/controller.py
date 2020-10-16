@@ -82,7 +82,7 @@ def edit_quote(quote_id):
             quote.html_render = edit_form.html_render.data
             db.session.add(quote)
             db.session.commit()
-            flash("Changes was saved", "success")
+            flash("Changes was saved", "quote_edited")
             return redirect(url_for("admin.view_adminpage", quote_id = quote_id))
 
 ## s metódou DELETE na ostránenie citátu
@@ -93,7 +93,7 @@ def remove_quote(quote_id):
     if quote:
         db.session.delete(quote)
         db.session.commit()
-        flash("Quote was removed", "success")
+        flash("Quote was removed", "quote_deleted")
         return redirect(url_for("admin.view_adminpage"))
 
 

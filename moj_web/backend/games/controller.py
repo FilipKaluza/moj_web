@@ -4,7 +4,7 @@ games = Blueprint("games", __name__)
 
 @games.route('/games/')
 def view_gameslist():
-    return render_template("games/games.jinja")
+    return render_template("games/chore_door.jinja")
 
 @games.route('/games/choredoor/')
 def play_choredoor():
