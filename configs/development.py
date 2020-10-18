@@ -6,5 +6,5 @@ SQLALCHEMY_DATABASE_URI = "sqlite:////vagrant/quotes.db"
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = os.environ.get("MOJ_WEB_SECRET_KEY", None)
 
-RECAPTCHA_PRIVATE_KEY= os.environ.get("MOJ_WEB_RECAPTCHA_SECRETKEY", None)
+
 

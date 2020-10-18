@@ -1,0 +1,13 @@
+
+<div class="alert alert-dismissible text-center cookiealert" role="alert">
+  <div class="cookiealert-container fixed_bottom">
+      <b>We use cookies to ensure you get the best experience on our website. <a href={{ url_for("view_cookiepolicy") }} target="_blank">Learn more</a>
+
+      <button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close" >
+          I agree
+      </button>
+  </div>
+</div>
+
+
+<script src="{{ url_for("static", filename="js/cookiealert.js") }}"></script>

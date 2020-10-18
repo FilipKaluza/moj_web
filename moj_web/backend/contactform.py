@@ -15,4 +15,5 @@ class contactForm(FlaskForm):
     text = TextAreaField('Message', [
         DataRequired(),
         Length(min=4, message=('The minimum message lenght is at least 4 letters'))])
+    recaptcha = RecaptchaField()
     submit = SubmitField('Submit')

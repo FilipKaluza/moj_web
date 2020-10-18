@@ -16,7 +16,8 @@ flask_app = Flask(__name__, template_folder="../frontend/templates") ##template 
 
 flask_app.config.from_pyfile("/vagrant/configs/development.py")
 flask_app.config['RECAPTCHA_USE_SSL'] = False
-flask_app.config['RECAPTCHA_PUBLIC_KEY'] = "6LfLQNMZAAAAAN5I6ODbPF2TowIUW0vgN5U8fyKF"
+flask_app.config['RECAPTCHA_PUBLIC_KEY'] = "6LeVsdgZAAAAAEcOKJJM8ZK2UG2Wkyg6fkssIvdr"
+flask_app.config["RECAPTCHA_PRIVATE_KEY"] = os.environ.get("MOJ_WEB_RECAPTCHA_SECRETKEY", None)
 flask_app.config['RECAPTCHA_OPTIONS'] = {'theme': 'white'}
 flask_app.config['MAIL_SERVER']='smtp.gmail.com'
 flask_app.config['MAIL_PORT'] = 465
@@ -61,6 +62,12 @@ def view_contact():
     
     else:
         return render_template('contact/contact.jinja', contactform=contactform)
+
+
+@flask_app.route("/cookiepolicy/")
+def view_cookiepolicy():
+    return render_template("cookie_policy.jinja")
+
 
 ## CLI COMMAND
 def init_db(app):
